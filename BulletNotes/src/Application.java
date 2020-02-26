@@ -83,30 +83,33 @@ public class Application{
 			
 			"	Bullet Notes 0.0.0 | Anthony Mesa 2019\n\n" +
 			
-			"	Bullet Notes allows users to save and retrive notes in the\n" +
-			"	command line. A Clip is a collection of notes, all notes\n" +
-		       	"	must belong to a Clip.\n\n" +
+			"	Bullet Notes allows users to save and retrive notes in the \n" +
+			"	command line. A clip is a collection of notes, where all notes \n" +
+			"	must belong to at least one clip (assigning a bullet to multiple \n" +
+			"	clips is not implemented yet). Currently, it only records tasks (bullets) \n" +
+			"	to files (clips), and those same files can read back. \n"
 
 			"	Syntax:\n\n" +
 				
-			"		java bullet {COMMAND} {CLIP} {BULLET}\n\n" +
+			"		bullet {COMMAND} [CLIP_NAME] (BULLET)\n\n" +
 
-			"	The {BULLET} Variable is not a single string, but rather the\n" + 
+			"	The (BULLET) Variable is not a single string, but rather the\n" + 
 			"	entire text after the Clip, e.g.\n\n" +
 
-			"		java Bullet {-a} {Todo} {Pick up the newspaper}\n\n" +	
+			"		bullet {-a} {Todo} {Pick up the newspaper}\n\n" +	
 
 			"	Commands:\n\n" +
 
-			"		-g {CLIP}\n" +
+			"		-g [CLIP_NAME]\n" +
 			"			Gets and displays all bullet notess in the desigated Clip\n" +
-			"		-a {CLIP} {BULLET} \n" +
-			"			Adds a bullet note to the designated Clip\n" +
-			"		-dc {CLIP}\n" +
+			"		-a [CLIP_NAME] (BULLET) \n" +
+			"			Adds a bullet note to the designated clip \n" +
+			"			(will create new clip if clip does not already exist)."
+			"		-dc [CLIP_NAME]\n" +
 			"			Deletes designated Clip and all its data\n" +
-			"		-db {CLIP} {INDEX_OF_BULLET}\n" +
-			"			Deletes the Bullet within the specified clip by using\n" +
-			"			the Bullet's index in the clip (starting at 1)\n";
+			"		-db [CLIP_NAME] (BULLET_INDEX)\n" +
+			"			Deletes a Bullet within the specified clip at the \n" +
+			"			provided index (starting at 1)\n";
 		System.out.println(help);
 	}
 }
