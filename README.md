@@ -2,7 +2,7 @@
 
 Bullet Notes allows users to save and retrive notes in the command line. A clip is a collection of notes, where all notes must belong to at least one clip (assigning a bullet to multiple clips is not implemented yet). Currently, it only records tasks (bullets) to files (clips), and those same files can read back.
 
-# Execution
+## Execution
 Currently I have not been compiling the project into a jar files, I have just been running the class. Using any bash related environment I edited my .bash_aliases in my home directory as such:
 ```
 alias bullet="java -cp (PATH_TO_OUT_FOLDER) Application"
